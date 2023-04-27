@@ -21,6 +21,7 @@ public class frmLogin extends javax.swing.JDialog {
     NguoiDungDAO dao;
     public frmLogin(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+       
         initComponents();
         dao=new NguoiDungDAO();
     }
@@ -87,6 +88,11 @@ public class frmLogin extends javax.swing.JDialog {
         });
 
         btnExit.setText("Thoát");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -142,6 +148,10 @@ public class frmLogin extends javax.swing.JDialog {
            MsgBox.alert(jPanel1, "Sai tên đăng nhập hoặc mật khẩu");
        }
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments

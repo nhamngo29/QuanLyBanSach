@@ -27,7 +27,6 @@ public class NguoiDungDAO extends BanSachDAO<NguoiDung, Integer>{
         List<NguoiDung> lnd=selectBySql(SP_LOGIN, UserName,Password);
         if(lnd.size()==0)
         {
-            
             return null;
         }
         return lnd.get(0);
